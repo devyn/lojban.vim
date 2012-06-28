@@ -13,9 +13,14 @@ endif
 
 syn case ignore
 
+" permissable initial: [bcfgkmpsvx]l\|[bcdfgkmpstvx]r\|[cs][fknpt]\|[cjsz]m\|d[jz]\|[jz][bdgv]\|t[cs]
+
 syn match jbo_cmevla "\<[abcdefgijklmnoprstuvxyz,.']\+[bcdfgjklmnprstvxz]\.\=\>"
 
-syn match jbo_fuhivla "\<[abcdefgijklmnoprstuvxz,']\{-,3}[bcdfgjklmnprstvxz]\{2}[abcdefgijklmnoprstuvxz,']*[aoeui]\>"
+syn match jbo_fuhivla "\<\.\=[abcdefgijklmnoprstuvxyz][,'][aoeui][abcdefgijklmnoprstuvxyz][bcdfgjklmnprstvxz]\{2}[abcdefgijklmnoprstuvxyz,']*[aoeui]\>"
+syn match jbo_fuhivla "\<\.\=[abcdefgijklmnoprstuvxyz]\{2}[,'][aoeui][bcdfgjklmnprstvxz]\{2}[abcdefgijklmnoprstuvxyz,']*[aoeui]\>"
+syn match jbo_fuhivla "\<\.\=[abcdefgijklmnoprstuvxyz,']\{-1,3}[bcdfgjklmnprstvxz]\{2}[abcdefgijklmnoprstuvxyz,']*[aoeui]\>"
+syn match jbo_fuhivla "\<[bcdfgjklmnprstvxz]\{2}[abcdefgijklmnoprstuvxyz,']\+[aoeui]\>"
 
 syn match   jbo_numeric  "ci'i\|ka'o\|no'o\|pai\|te'o\|tu'o\|dau\|fei\|gai\|jau\|rei\|vai\|xei\|\(xo\|no\|pa\|re\|ci\|vo\|mu\|xa\|ze\|bi\|so\)['aoeuiy]\@!" contained
 syn match   jbo_numeric  "[0-9]" contained
@@ -24,7 +29,7 @@ syn match   jbo_special  "ni'o\|no'i\|\(\<\|\.\)i['aoeuiy]\@!" contained
 
 syn match jbo_gismu "\<[bcdfgjklmnprstvxz]\([aoeui][bcdfgjklmnprstvxz]\|[bcdfgjklmnprstvxz][aoeui]\)[bcdfgjklmnprstvxz][aoeui]\>"
 
-syn match jbo_lujvo "\<\([bcdfgjklmnprstvxz][bcdfgjklmnprstvxz][aoeui]\|[bcdfgjklmnprstvxz][aoeui]\([bcdfgjklmnprstvxz]y\=\|[aoeui][rn]\=\|'[aoeui][rn]\=\)\|[bcdfgjklmnprstvxz]\([aoeui][bcdfgjklmnprstvxz]\|[bcdfgjklmnprstvxyz[aoeui]\)[bcdfgjklmnprstvxz]y\)\+\([bcdfgjklmnprstvxz][bcdfgjklmnprstvxz][aoeui]\|[bcdfgjklmnprstvxz][aoeui]\([bcdfgjklmnprstvxz]\|[aoeui]\|'[aoeui]\)\|[bcdfgjklmnprstvxz]\([aoeui][bcdfgjklmnprstvxz]\|[bcdfgjklmnprstvxyz][aoeui]\)[bcdfgjklmnprstvxz][aoeui]\)\>"
+syn match jbo_lujvo "\<\([bcfgkmpsvx]l[aoeui]\|[bcdfgkmpstvx]r[aoeui]\|[cs][fknpt][aoeui]\|[cjsz]m[aoeui]\|d[jz][aoeui]\|[jz][bdgv][aoeui]\|t[cs][aoeui]\|[bcdfgjklmnprstvxz][aoeui]\([bcdfgjklmnprstvxz]y\=\|'\=[aoeui]\(rr\@!\|nr\@=\)\=\)\|[bcdfgjklmnprstvxz][aoeui][bcdfgjklmnprstvxz]\{2}y\|\([bcfgkmpsvx]l\|[bcdfgkmpstvx]r\|[cs][fknpt]\|[cjsz]m\|d[jz]\|[jz][bdgv]\|t[cs]\)[aoeui][bcdfgjklmnprstvxz]y\)\+\([bcfgkmpsvx]l[aoeui]\|[bcdfgkmpstvx]r[aoeui]\|[cs][fknpt][aoeui]\|[cjsz]m[aoeui]\|d[jz][aoeui]\|[jz][bdgv][aoeui]\|t[cs][aoeui]\|[bcdfgjklmnprstvxz][aoeui]\([bcdfgjklmnprstvxz]\|[aoeui]\|'[aoeui]\)\|[bcdfgjklmnprstvxz][aoeui][bcdfgjklmnprstvxz]\{2}[aoeui]\|\([bcfgkmpsvx]l\|[bcdfgkmpstvx]r\|[cs][fknpt]\|[cjsz]m\|d[jz]\|[jz][bdgv]\|t[cs]\)[aoeui][bcdfgjklmnprstvxz][aoeui]\)\>"
 
 syn match jbo_cmavo "\<\(y\('y\)\=\|[aoeui]'[aoeui]\|[aoeui][aoeui]\=\)\(\.y\('y\)\=\|\.[aoeui]'[aoeui]\|\.[aoeui][aoeui]\=\|[bcdfgjklmnprstvxz]\(y\|[aoeui]\('[aoeui]\)\=[aoeui]\=\)\)*\>" contains=jbo_numeric,jbo_num_oper,jbo_special
 syn match jbo_cmavo "\<\([0-9]\|\.y\('y\)\=\|\.[aoeui]'[aoeui]\|\.[aoeui][aoeui]\=\|[bcdfgjklmnprstvxz]\(y\|[aoeui]\('[aoeui]\)\=[aoeui]\=\)\)\+\>" contains=jbo_numeric,jbo_num_oper,jbo_special
