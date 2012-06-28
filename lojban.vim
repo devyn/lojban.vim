@@ -27,7 +27,8 @@ syn match   jbo_numeric  "[0-9]" contained
 syn match   jbo_num_oper "ce'i\|fi'u\|ki'o\|ma'u\|me'i\|ni'u\|pi'e\|ra'e\|za'u\|da'a\|du'e\|ji'i\|mo'a\|so'a\|so'e\|so'i\|so'o\|so'u\|su'e\|su'o\|rau\|\(pi\|ro\)['aoeuiy]\@!" contained
 syn match   jbo_special  "ni'o\|no'i\|\(\<\|\.\)i['aoeuiy]\@!" contained
 
-syn match jbo_gismu "\<[bcdfgjklmnprstvxz]\([aoeui][bcdfgjklmnprstvxz]\|[bcdfgjklmnprstvxz][aoeui]\)[bcdfgjklmnprstvxz][aoeui]\>"
+syn match jbo_gismu "\<[bcdfgjklmnprstvxz][aoeui][bcdfgjklmnprstvxz]\{2}[aoeui]\>"
+syn match jbo_gismu "\<\([bcfgkmpsvx]l\|[bcdfgkmpstvx]r\|[cs][fknpt]\|[cjsz]m\|d[jz]\|[jz][bdgv]\|t[cs]\)[aoeui][bcdfgjklmnprstvxz][aoeui]\>"
 
 syn match jbo_lujvo "\<\([bcfgkmpsvx]l[aoeui]\|[bcdfgkmpstvx]r[aoeui]\|[cs][fknpt][aoeui]\|[cjsz]m[aoeui]\|d[jz][aoeui]\|[jz][bdgv][aoeui]\|t[cs][aoeui]\|[bcdfgjklmnprstvxz][aoeui]\([bcdfgjklmnprstvxz]y\=\|'\=[aoeui]\(rr\@!\|nr\@=\)\=\)\|[bcdfgjklmnprstvxz][aoeui][bcdfgjklmnprstvxz]\{2}y\|\([bcfgkmpsvx]l\|[bcdfgkmpstvx]r\|[cs][fknpt]\|[cjsz]m\|d[jz]\|[jz][bdgv]\|t[cs]\)[aoeui][bcdfgjklmnprstvxz]y\)\+\([bcfgkmpsvx]l[aoeui]\|[bcdfgkmpstvx]r[aoeui]\|[cs][fknpt][aoeui]\|[cjsz]m[aoeui]\|d[jz][aoeui]\|[jz][bdgv][aoeui]\|t[cs][aoeui]\|[bcdfgjklmnprstvxz][aoeui]\([bcdfgjklmnprstvxz]\|[aoeui]\|'[aoeui]\)\|[bcdfgjklmnprstvxz][aoeui][bcdfgjklmnprstvxz]\{2}[aoeui]\|\([bcfgkmpsvx]l\|[bcdfgkmpstvx]r\|[cs][fknpt]\|[cjsz]m\|d[jz]\|[jz][bdgv]\|t[cs]\)[aoeui][bcdfgjklmnprstvxz][aoeui]\)\>"
 
