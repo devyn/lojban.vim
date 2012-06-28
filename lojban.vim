@@ -22,7 +22,10 @@ syn match jbo_fuhivla "\<\.\=[abcdefgijklmnoprstuvxyz]\{2}[,'][aoeui][bcdfgjklmn
 syn match jbo_fuhivla "\<\.\=[abcdefgijklmnoprstuvxyz,']\{-1,3}[bcdfgjklmnprstvxz]\{2}[abcdefgijklmnoprstuvxyz,']*[aoeui]\>"
 syn match jbo_fuhivla "\<[bcdfgjklmnprstvxz]\{2}[abcdefgijklmnoprstuvxyz,']\+[aoeui]\>"
 
-syn match   jbo_numeric  "ci'i\|ka'o\|no'o\|pai\|te'o\|tu'o\|ce'i\|fi'u\|ki'o\|me'i\|ni'u\|pi'e\|ra'e\|za'u\|da'a\|du'e\|ji'i\|mo'a\|so'a\|so'e\|so'i\|so'o\|so'u\|su'e\|su'o\|dau\|fei\|gai\|jau\|rei\|vai\|xei\|rau\|\(xo\|no\|pa\|re\|ci\|vo\|mu\|xa\|ze\|bi\|so\|pi\|ro\)['aoeuiy]\@!" contained
+syn match   jbo_numeric  "dau\|fei\|gai\|jau\|rei\|vai\|xei\|rau" contained
+syn match   jbo_numeric  "\(xo\|no\|pa\|re\|ci\|vo\|mu\|xa\|ze\|bi\|so\|pi\|ro\)['aoeuiy]\@!" contained
+syn match   jbo_numeric  "ci'i\|ka'o\|no'o\|pai\|te'o\|tu'o\|ce'i\|fi'u\|ki'o\|me'i\|ni'u\|pi'e\|ra'e\|za'u\|da'a" contained
+syn match   jbo_numeric  "du'e\|ji'i\|mo'a\|so'a\|so'e\|so'i\|so'o\|so'u\|su'e\|su'o" contained
 syn match   jbo_numeric  "[0-9]" contained
 syn match   jbo_special2 "to['aoeuiy]\@!\|to'i\|toi\|lu['aoeuiy]\@!\|li'u" contained
 syn match   jbo_special  "ni'o\|no'i\|\(\<\|\.\)i['aoeuiy]\@!" contained
